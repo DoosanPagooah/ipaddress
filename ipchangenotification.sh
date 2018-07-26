@@ -8,13 +8,13 @@ LASTIP=`cat ${LASTIPFILE}`;
  
 if [[ ${MYIP} != ${LASTIP} ]]
 then
-        echo "New IP = ${MYIP}"
-        echo "Updating Github witn New Public IP"
+        echo "New IP = ${MYIP}";
+        echo "Updating Github witn New Public IP";
         echo ${MYIP} > ${LASTIPFILE};
-        cd /home/doosan/bin
-        git add -A
-        git commit -am "Updated Script"
-        git push
+        cd /home/doosan/bin;
+        git add -A;
+        git commit -am "Updated Script";
+        git push;
 else
         echo "no IP change!"
 fi
