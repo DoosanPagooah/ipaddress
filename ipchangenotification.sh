@@ -1,6 +1,6 @@
 #!/bin/bash
 # check and send ip address to email
-# Changes Version 1  
+# Changes Version 2  
 MYIP=`dig +short myip.opendns.com @resolver1.opendns.com`;
 TIME=`date`;
  
