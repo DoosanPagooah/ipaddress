@@ -3,7 +3,7 @@
 # Changes Version 2  
 MYIP=`dig +short myip.opendns.com @resolver1.opendns.com`;
  
-LASTIPFILE='/home/doosan/bin/.last_ip_addr';
+LASTIPFILE=/home/doosan/Documents/Git/ipaddress/last_ip_addr;
 LASTIP=`cat ${LASTIPFILE}`;
  
 if [[ ${MYIP} != ${LASTIP} ]]
@@ -11,7 +11,7 @@ then
         echo "New IP = ${MYIP}";
         echo "Updating Github witn New Public IP";
         echo ${MYIP} > ${LASTIPFILE};
-        cd /home/doosan/bin;
+        cd /home/doosan/Documents/Git/ipaddress;
         git add -A;
         git commit -am "Updated Script";
         git push;
